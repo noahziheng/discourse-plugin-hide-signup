@@ -8,6 +8,7 @@ export default {
             subtree: true
         };
         const observer = new MutationObserver((_mutationsList) => {
+            console.log('Observer', _mutationsList);
             document.querySelectorAll('.sign-up-button').forEach(node => node.remove());
             document.querySelectorAll('#new-account-link').forEach(node => node.remove());
         });
